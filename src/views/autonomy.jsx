@@ -22,7 +22,7 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons'; // Brand icon
 
 const Autonomy = () => {
   return (
-    <div>
+    <div className='font-avenir-book'>
       <Header />
       <main className="w-full flex h-[calc(100vh-4rem)]">
         <div
@@ -36,7 +36,7 @@ const Autonomy = () => {
           </div>
         </div>
         <div  className="relative w-[50%] text-center flex items-center justify-center bg-[#A76734]">
-            <h1 className="text-4xl mb-12">We tell the<br/>world about<br/>all the good that<br/>is being done.</h1>
+            <h1 className="text-4xl mb-12 font-lustria">We tell the<br/>world about<br/>all the good that<br/>is being done.</h1>
         </div>
       </main>
 
@@ -80,7 +80,7 @@ const Autonomy = () => {
 
       <div className="relative w-full h-screen bg-cover bg-center flex flex-col items-center justify-center text-center" style={{ backgroundImage: `url(${M3_Image})` }}>
         {/* Texto principal */}
-        <h1 className="text-4xl md:text-6xl font-semibold text-white mb-4">
+        <h1 className="text-4xl md:text-6xl font-lustria text-white mb-4">
             Loom allows us <br /> to continue<br />transforming lives
         </h1>
 
@@ -98,16 +98,16 @@ const Autonomy = () => {
       <main className=" w-full h-screen flex">
           <div className="  bg-[#575f3d] p-8 w-[50%] flex justify-center">
               <div className='w-[50%] h-full flex flex-col text-center items-center justify-center'>
-                  <h2 className="text-5xl font-avenir-light font-bold mb-8">The story behind our coffee</h2>
+                  <h2 className="text-4xl font-lustria  mb-8">The story behind <br/>our coffee</h2>
                   <img src={M4_logo} alt="Weaving Loom" className="w-20 mt-4 object-cover" />
 
                   <p className="text-xl mt-4 text-center">
-                      We work with local farmers and small-scale<br />
-                      coffee producers from Guatemala who believe<br />
-                      that every coffee bean must have the best<br />
-                      quality possible. They evaluate their quality,<br />
-                      fragrance, aroma, flavour, balance and<br />
-                      sweetness so they can offer an exceptional<br />
+                      We work with local farmers and small-scale
+                      coffee producers from Guatemala who believe
+                      that every coffee bean must have the best
+                      quality possible. They evaluate their quality,
+                      fragrance, aroma, flavour, balance and
+                      sweetness so they can offer an exceptional
                       experience to your palate.
                   </p>
 
@@ -126,7 +126,7 @@ const Autonomy = () => {
       <main className="relative w-full h-screen flex bg-[#dedbd6]">
         {/* Lado izquierdo */}
         <div className="relative w-[50%] flex flex-col justify-start ml-28 mt-28 items-start px-12">
-          <h1 className="text-[5rem] font-semibold text-[#215a81] mb-4">
+          <h1 className="text-[5rem] font-lustria text-[#215a81] mb-4">
             We’ve got<br /> more stories<br /> to tell
           </h1>
           <div className="flex items-center">

@@ -14,6 +14,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons'; // Regular icon
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'; // Brand icon
 
+import MapComponent from '../components/map'
+
 const Contact = () => {
   return (
     <div>
@@ -60,6 +62,7 @@ const Contact = () => {
           </div>
         </div>
 
+        <MapComponent coordinates={[55.860910, -4.241640]} center={[55.860910, -4.241640]} popupDescription="Caribbean Goods" zoom={15} type="marker" />
         {/* Mapa */}
       </main>
 

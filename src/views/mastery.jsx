@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from '../components/header'
+import { useNavigate } from 'react-router-dom';
 
 import M1_Image from '../assets/Mastery/1.png'
 import M1_Logo from '../assets/Logos/LoomLogoOficial_3.png'
@@ -18,9 +18,13 @@ import Band_Vector_1 from '../assets/Home/12.png'
 import Band_Vector_2 from '../assets/Home/11.png'
 
 const Mastery = () => {
+  const navigate = useNavigate();
+  const goTo = (path) => {
+    navigate(path); // Navega directamente a la ruta especificada
+  };
+
   return (
     <div>
-      <Header />
       <main className="flex justify-between items-center bg-[#dedbd6] h-[calc(100vh-4rem)]">
         <div className="w-[30%] flex justify-center items-center">
           <img src={M1_Logo} alt="Persona sonriendo" className="w-40 object-cover" />

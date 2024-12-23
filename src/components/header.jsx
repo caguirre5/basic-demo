@@ -1,33 +1,43 @@
-import React, { useState } from 'react';
-import Logo from '../assets/LoomLogo.png';  // Asegúrate de ajustar la ruta al lugar donde guardaste tu imagen
+import React from 'react';
+import Logo from '../assets/LoomLogo.png';
+import { motion } from 'framer-motion';
 
-import { Link } from 'react-router-dom';
-
-const Header = () => {
-  const [isOpen, setMenuOpen] = useState(false);
+const Header = ({ setActiveSection, activeSection }) => {
+  const menuItems = [
+    { name: 'Home', section: 'home' },
+    { name: 'Autonomy', section: 'autonomy' },
+    { name: 'Mastery', section: 'mastery' },
+    { name: 'Purpose', section: 'purpose' },
+    { name: 'Contact', section: 'contact' },
+  ];
 
   return (
     <header className="flex justify-between items-center bg-[#575f3D] h-16 px-4">
-      {/* Bloque azul para el logo */}
       <div className="flex items-center justify-start flex-1 h-full">
-        <img src={Logo} alt="Logo" className="h-6 ml-2" />  {/* Usando img en lugar de svg */}
+        <img src={Logo} alt="Logo" className="h-6 ml-2" />
       </div>
       
-      {/* Bloque verde para la navegación */}
       <div className="flex-1 flex justify-evenly items-center">
-        <ul className="flex gap-4">
-          <li className="text-white"><Link to="/">Home</Link></li>
-          <li className="text-white"><Link to="/autonomy">Autonomy</Link></li>
-          <li className="text-white"><Link to="/mastery">Mastery</Link></li>
-          <li className="text-white"><Link to="/purpose">Purpose</Link></li>
-          <li className="text-white"><Link to="/contact">Contact</Link></li>
+        <ul className="flex gap-8">
+          {menuItems.map((item) => (
+            <li key={item.section} className="relative cursor-pointer" onClick={() => setActiveSection(item.section)}>
+              <span className={`text-white ${activeSection === item.section ? 'font-bold' : ''}`}>
+                {item.name}
+              </span>
+              {activeSection === item.section && (
+                <motion.div
+                  layoutId="underline"
+                  className="absolute -bottom-1 left-0 w-full h-[2px] bg-white"
+                  transition={{ duration: 0.3 }}
+                />
+              )}
+            </li>
+          ))}
         </ul>
       </div>
       
-      {/* Bloque rojo vacío */}
-      <div className="flex-1">
-      </div>
-    </header> 
+      <div className="flex-1"></div>
+    </header>
   );
 };
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from '../components/header'
+import { useNavigate } from 'react-router-dom';
 
 import M1_Background from '../assets/Purpose/1.png'
 
@@ -13,7 +13,7 @@ import M5_Background from '../assets/Purpose/7.png'
 
 import M6_Background from '../assets/Purpose/5.png'
 
-import M7_Background from '../assets/Purpose/6.png'
+import M7_Background from '../assets/Purpose/MAIA.jpg'
 
 import Band_Vector_1 from '../assets/Home/10.png'
 import Band_Vector_2 from '../assets/Home/11.png'
@@ -26,12 +26,16 @@ import { faFacebook } from '@fortawesome/free-brands-svg-icons'; // Regular icon
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'; // Brand icon
 
 const Purpose = () => {
+  const navigate = useNavigate();
+  const goTo = (path) => {
+    navigate(path); // Navega directamente a la ruta especificada
+  };
+
   return (
     <div>
-      <Header />
       <main className="relative w-full h-[calc(100vh-4rem)] bg-cover bg-center flex flex-col items-end justify-center text-center pr-[15%]" style={{ backgroundImage: `url(${M1_Background})` }}>
         {/* Texto principal */}
-        <h1 className="text-5xl font-semibold text-white mb-4">
+        <h1 className="text-5xl font-lustria text-white mb-4">
             It's always<br/>about changing<br/>the world.
         </h1>
       </main>
@@ -76,8 +80,8 @@ const Purpose = () => {
 
       <main class="flex flex-row bg-gray-100 min-h-screen p-20" style={{ backgroundImage: `url(${M5_Background})` }}>
         <section class="relative w-[35%]  mr-5 bg-[#8292a7] text-white flex flex-col justify-evenly pb-20" >
-          <h1 class="mx-[20%] text-5xl font-serif mb-4">Coffee that <br/>sows life.</h1>
-          <h2 class="mx-[20%] text-5xl font-serif">Coffee <br/>empowers.</h2>
+          <h1 class="mx-[20%] text-5xl font-lustria mb-4">Coffee that <br/>sows life.</h1>
+          <h2 class="mx-[20%] text-5xl font-lustria">Coffee <br/>empowers.</h2>
           <img src={M5_band} alt="Loom Coffeehouse Logo" className="w-full absolute bottom-0" />
         </section>
 
@@ -139,7 +143,7 @@ const Purpose = () => {
       >
         <div 
             className=' h-[50%]'
-            style={{ backgroundImage: `url(${M7_Background})` }}
+            style={{ backgroundImage: `url(${M7_Background})`,backgroundPosition:'top' }}
         />
         <div 
             className='h-[50%] bg-[#dedbd6] flex justify-center items-center '
@@ -165,14 +169,14 @@ const Purpose = () => {
             <img src={M7_logo} alt="Weaving Loom" className=" h-10 mt-4 object-cover" />
             <div className="flex space-x-4 mt-2">
               {/* Ícono de Facebook */}
-              <a href="#" aria-label="Facebook">
+              <a href="https://www.facebook.com/share/tCBZRZFuTBMt8Wvq/?mibextid=wwXIfr" target='_blank' aria-label="Facebook">
                 <FontAwesomeIcon
                   icon={faFacebook}
                   className="text-2xl text-[#ffffff] hover:text-[#FFD8CC] transition-colors"
                 />
               </a>
               {/* Ícono de Instagram */}
-              <a href="#" aria-label="Instagram">
+              <a href="https://www.instagram.com/loomcoffeehouse/profilecard/?igsh=djVkMGJpb2NqcmV1" target='_blank' aria-label="Instagram">
                 <FontAwesomeIcon
                   icon={faInstagram}
                   className="text-2xl text-[#ffffff] hover:text-[#FFD8CC] transition-colors"

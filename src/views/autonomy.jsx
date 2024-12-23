@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from '../components/header'
+import { useNavigate } from 'react-router-dom';
 
 import Band_Vector_1 from '../assets/Home/10.png'
 import Band_Vector_2 from '../assets/Home/11.png'
@@ -21,10 +21,15 @@ import { faFacebook } from '@fortawesome/free-brands-svg-icons'; // Regular icon
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'; // Brand icon
 
 const Autonomy = () => {
+  const navigate = useNavigate();
+  const goTo = (path) => {
+    navigate(path); // Navega directamente a la ruta especificada
+  };
+  
+
   return (
-    <div className='font-avenir-book'>
-      <Header />
-      <main className="w-full flex h-[calc(100vh-4rem)]">
+    <div className=''>
+      <main className="w-full flex h-[calc(100vh-4rem)] font-avenir-book">
         <div
           className='w-[50%] relative'
           style={{ backgroundImage: `url(${M1_Image})`, backgroundSize:'cover'}}
@@ -130,8 +135,12 @@ const Autonomy = () => {
             We’ve got<br /> more stories<br /> to tell
           </h1>
           <div className="flex items-center">
-            <FontAwesomeIcon icon={faFacebook} className="text-2xl mx-1 text-[#8292A7]" />
-            <FontAwesomeIcon icon={faInstagram} className="text-2xl mx-1 text-[#8292A7]"  />
+            <a href="https://www.facebook.com/share/tCBZRZFuTBMt8Wvq/?mibextid=wwXIfr" target='_blank' aria-label="Facebook">
+              <FontAwesomeIcon icon={faFacebook} className="text-2xl mx-1 text-[#8292A7]  hover:text-[#687586]"/>
+            </a>
+            <a href="https://www.instagram.com/loomcoffeehouse/profilecard/?igsh=djVkMGJpb2NqcmV1" target='_blank' aria-label="Instagram">
+              <FontAwesomeIcon icon={faInstagram} className="text-2xl mx-1 text-[#8292A7] hover:text-[#687586]"  />
+            </a>
             <span className="text-lg text-[#A76734] ml-2">@LOOMCOFFEEHOUSE</span>
           </div>
           
@@ -172,30 +181,26 @@ const Autonomy = () => {
             {/* Sección izquierda */}
             <div>
               <h3 className="text-2xl font-bold mb-3">Find us here</h3>
-              <p className="text-base font-light">hello@reallygreatsite.com</p>
+              <p className="text-base font-light">relax@loomcofeehouse.com</p>
             </div>
 
             {/* Sección central */}
             <div className="text-right">
-              <p className="text-base font-light mb-2 leading-6">
-                123 Anywhere St.<br />
-                Any City,<br />
-                Any State
-              </p>
-              <p className="text-base font-light">123-456-7890</p>
+              <p className="text-md text-[#DEDBD6] mb-2">Loom CoffeeHouse</p>
+              <p className="text-sm text-[#DEDBD6] mb-2">128 Maryhill Road Glasgow. G20 7QS</p>
             </div>
 
             {/* Sección derecha */}
             <div className="flex space-x-4">
               {/* Ícono de Facebook */}
-              <a href="#" aria-label="Facebook">
+              <a href="https://www.facebook.com/share/tCBZRZFuTBMt8Wvq/?mibextid=wwXIfr" target='_blank' aria-label="Facebook">
                 <FontAwesomeIcon
                   icon={faFacebook}
                   className="text-2xl text-[#ffffff] hover:text-[#FFD8CC] transition-colors"
                 />
               </a>
               {/* Ícono de Instagram */}
-              <a href="#" aria-label="Instagram">
+              <a href="https://www.instagram.com/loomcoffeehouse/profilecard/?igsh=djVkMGJpb2NqcmV1" target='_blank' aria-label="Instagram">
                 <FontAwesomeIcon
                   icon={faInstagram}
                   className="text-2xl text-[#ffffff] hover:text-[#FFD8CC] transition-colors"

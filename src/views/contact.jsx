@@ -25,35 +25,48 @@ const Contact = () => {
   return (
     <div>
       <main
-        className="relative w-full h-[calc(100vh-18rem)] bg-cover bg-center flex items-center"
+        className="relative w-full h-screen lg:h-[calc(100vh-18rem)] bg-cover bg-center flex items-center"
         style={{
           backgroundImage: `url(${M1_Image})`, // Reemplaza con la ruta de tu imagen
         }}
       >
         {/* Texto en el lado izquierdo */}
-        <div className="absolute left-16 top-1/3 text-white">
+        <div className="hidden lg:block absolute lg:left-16 lg:top-1/3 text-white">
           <h1 className="text-4xl md:text-6xl font-lustria leading-tight">
             Come<br />and relax<br />with us
           </h1>
         </div>
 
         {/* Logo en la esquina inferior derecha */}
-        <div className="absolute bottom-20 right-20 text-white text-center">
+        <div className="hidden lg:block absolute lg:bottom-20 lg:right-20 text-white text-center">
+          <img src={M1_Logo} alt="Loom Coffeehouse Logo" className="w-[8rem] h-auto" />
+        </div>
+
+        {/* ------------------------------------------------------------------------------------------- */}
+
+        <div className="block lg:hidden absolute top-0 ml-10 mt-10 text-white">
+          <h1 className="text-4xl md:text-6xl font-lustria leading-tight">
+            Come<br />and relax<br />with us
+          </h1>
+        </div>
+
+        {/* Logo en la esquina inferior derecha */}
+        <div className="block lg:hidden absolute bottom-0 mb-20 right-0 mr-10 text-white text-center">
           <img src={M1_Logo} alt="Loom Coffeehouse Logo" className="w-[8rem] h-auto" />
         </div>
       </main>
 
-      <main className=" w-full h-screen flex">
-        <div className="relative bg-[#a76734] w-[35%] pb-40 flex flex-col justify-end items-start text-white">
+      <main className=" w-full h-screen flex flex-col lg:flex-row">
+        <div className="relative bg-[#a76734]  lg:h-auto lg:w-[35%] pb-40 flex flex-col justify-end items-start text-white">
           {/* Imagen del vector */}
           <img
             src={M1_Vector} // Reemplaza con la ruta de tu imagen PNG
             alt="Plant Decoration"
-            className="-ml-20 w-[50%] h-auto opacity-80"
+            className="-ml-20 w-[50%]  lg:h-auto opacity-80"
           />
 
           {/* Contenido textual */}
-          <div className="relative flex flex-col px-[20%] w-full">
+          <div className="relative   flex-col items-center lg:items-start text-center lg:text-left lg:px-[20%] w-full">
             <h2 className="text-5xl font-lustria mb-6">Find us at</h2>
             <div className="space-y-2 ">
               <p className="text-md text-[#DEDBD6] mb-2">Loom CoffeeHouse</p>
@@ -92,7 +105,7 @@ const Contact = () => {
         </div>
 
         {/* Sección derecha: Texto */}
-        <div className="px-[10%] w-full md:w-1/2 flex flex-col justify-center items-start">
+        <div className="lg:px-[10%] w-full md:w-1/2 flex flex-col justify-center items-start">
           <h1 className="text-4xl md:text-5xl font-lustria text-[#204968] mb-6 leading-tight">
             Let’s enjoy<br />
             this journey<br />
@@ -113,8 +126,8 @@ const Contact = () => {
         </div>
       </main>
 
-      <div className="h-[20vh] bg-[#A76734] flex justify-center items-center">
-          <div className="w-full max-w-6xl flex justify-between items-start text-white px-8 py-4">
+      <div className="lg:h-[20vh] bg-[#A76734] flex  justify-center items-center">
+          <div className="w-full max-w-6xl flex flex-col lg:flex-row justify-between items-start text-white px-8 py-8 lg:py-4">
             {/* Sección izquierda */}
             <div>
               <h3 className="text-2xl font-lustria mb-3">Find us here</h3>
@@ -122,7 +135,7 @@ const Contact = () => {
             </div>
 
             {/* Sección central */}
-            <div className="text-right">
+            <div className="lg:text-right">
               <p className="text-md text-[#DEDBD6] mb-2">Loom CoffeeHouse</p>
               <p className="text-sm text-[#DEDBD6] mb-2">128 Maryhill Road Glasgow. G20 7QS</p>
             </div>

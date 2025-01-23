@@ -40,27 +40,27 @@ const Purpose = () => {
         </h1>
       </main>
 
-      <main className="relative overflow-hidden w-full p-4 h-[40vh] text-center flex flex-col items-center justify-center bg-[#dedbd6]">
-        <p className="mt-4 w-[25%] text-2xl text-[#575f3d]">
+      <main className="relative overflow-hidden w-full p-4 h-[30vh] lg:h-[40vh] text-center flex flex-col items-center justify-center bg-[#dedbd6]">
+        <p className="mt-4 lg:w-[25%] text-xl lg:text-2xl text-[#575f3d]">
             Let us tell you about
         </p>
-        <p className="text-5xl text-[#a76734] font-bold">Hunbatz <span className='text-[#575f3d]'>&</span> Hunchouen</p>
-        <img src={Band_Vector_1} alt="Loom Coffeehouse Logo" className="absolute top-0 right-0" />
-        <img src={Band_Vector_2} alt="Loom Coffeehouse Logo" className="absolute top-0 left-0" />
+        <p className="text-3xl lg:text-5xl text-[#a76734] font-bold">Hunbatz <span className='text-[#575f3d]'>&</span> Hunchouen</p>
+        <img src={Band_Vector_1} alt="Loom Coffeehouse Logo" className="w-[20%] lg:w-auto lg:h-auto absolute top-0 right-0" />
+        <img src={Band_Vector_2} alt="Loom Coffeehouse Logo" className="w-[20%] lg:w-auto lg:h-auto absolute top-0 left-0" />
       </main>
 
       <main className='relative h-screen flex flex-col justify-center items-center bg-[#a76734]'>
-          <div className=' w-[60%] flex flex-col'>
-            <h2 className='mb-12 text-start text-6xl '>Hunbatz &<br/>Hunchouen</h2>
-            <div className='flex'>
-              <div className='mr-5 text-right w-[30%]'>
+          <div className='w-[90%] lg:w-[60%] flex flex-col'>
+            <h2 className='mb-12 text-start text-3xl lg:text-6xl '>Hunbatz &<br className='hidden lg:block'/>Hunchouen</h2>
+            <div className='flex text-sm lg:text-base'>
+              <div className='mr-2 lg:mr-5 text-right lg:w-[30%]'>
                 <p>
                   According to the sixteenth-century Popol Vuh creation myth, two brothers, Hunbatz and Hunchouen, were once talented dancers and artists.
 
                   <br/><br/>By nature, these two sons were wise, and their wisdom was great.
                 </p>
               </div>
-              <div className='ml-5 w-[60%]'>
+              <div className='ml-2 lg:ml-5 lg:w-[60%]'>
                 <p>
                 All the arts were taught to Hunbatz and Hunchouen, the sons of Hun-Hunahpú. They were flautists, singers, shooters with blowguns, painters, sculptors, jewellers and silversmiths.
 
@@ -78,24 +78,24 @@ const Purpose = () => {
           <img src={M4_bg} alt="Loom Coffeehouse Logo" className="absolute  h-screen bottom-0 left-0 top-0 right-0" />
       </main>
 
-      <main class="flex flex-row bg-gray-100 min-h-screen p-20" style={{ backgroundImage: `url(${M5_Background})` }}>
-        <section class="relative w-[35%]  mr-5 bg-[#8292a7] text-white flex flex-col justify-evenly pb-20" >
-          <h1 class="mx-[20%] text-5xl font-lustria mb-4">Coffee that <br/>sows life.</h1>
-          <h2 class="mx-[20%] text-5xl font-lustria">Coffee <br/>empowers.</h2>
+      <main class="flex w-full flex-col lg:flex-row bg-gray-100 min-h-screen p-8 lg:p-20" style={{ backgroundImage: `url(${M5_Background})` }}>
+        <section class="relative w-full lg:w-[35%]  lg:mr-5 bg-[#8292a7] text-white flex flex-col justify-evenly pt-6 pb-16 lg:pb-20" >
+          <h1 class="mx-[10%] lg:mx-[20%] text-xl lg:text-5xl font-lustria mb-4">Coffee that <br/>sows life.</h1>
+          <h2 class="mx-[10%] lg:mx-[20%] text-xl lg:text-5xl font-lustria">Coffee <br/>empowers.</h2>
           <img src={M5_band} alt="Loom Coffeehouse Logo" className="w-full absolute bottom-0" />
         </section>
 
-        <section class="w-[65%] bg-gray-50 ml-5 p-28 flex flex-col items-center justify-center">
+        <section class="w-full lg:w-[65%] mt-8 lg:mt-0 bg-gray-50 lg:ml-5 p-10 lg:p-28 flex flex-col items-center justify-center">
           <div class="mb-12">
-            <h3 class="text-4xl font-serif text-[#575f3d] mb-4">Hunbatz</h3>
-            <p class="text-[#8292a7]">
+            <h3 class="text-2xl lg:text-4xl font-serif text-[#575f3d] mb-4">Hunbatz</h3>
+            <p class="text-[#8292a7] text-sm lg:text-base">
               A collection of small coffee producers in the northwestern highlands of Guatemala, specifically in the Culico region of Huehuetenango, form the backbone of Hunbatz. 
               <strong>For each 30 kg bag of Hunbatz coffee we sell, we plant a tree on behalf of the coffee roaster who purchased it.</strong>
             </p>
           </div>
           <div>
-            <h3 class="text-4xl font-serif text-[#575f3d] mb-4">Hunchouen</h3>
-            <p class="text-[#8292a7]">
+            <h3 class="text-2xl lg:text-4xl font-serif text-[#575f3d] mb-4">Hunchouen</h3>
+            <p class="text-[#8292a7] text-sm lg:text-base">
               Hunchouen is conformed by small producers in the Tajumuco region of Huehuetenango. The collective was formed in 1970 and it is made by 550 small producers. 
                every 30 kg bag of Hunchouen coffee sold, we contribute to our educational initiative, El Colegis a social project of Caribbean Goods dedicated to educating the children of the coffee pickers, providing them with literacy skills and basic English language instruction.
             </p>
@@ -103,38 +103,38 @@ const Purpose = () => {
         </section>
       </main>
 
-      <main className="relative overflow-hidden w-full p-4 h-[40vh] text-center flex flex-col items-center justify-center bg-[#dedbd6]">
-        <p className="my-4 text-2xl text-[#575f3d]">
+      <main className="relative overflow-hidden w-full p-4 h-[30vh] lg:h-[40vh] text-center flex flex-col items-center justify-center bg-[#dedbd6]">
+        <p className="my-4 text-base lg:text-2xl text-[#575f3d]">
             By purchasing these coffees you contribute to
         </p>
         <div className='flex justify-center items-center'>
-          <img src={TreesFL_Logo} alt="Weaving Loom" className="h-12 object-cover" />
-          <p className="text-4xl text-[#a76734] mx-6 font-bold">&</p>
-          <img src={MAIA_Logo} alt="Weaving Loom" className="h-12 object-cover" />
+          <img src={TreesFL_Logo} alt="Weaving Loom" className="h-8 lg:h-12 object-cover" />
+          <p className="text-xl lg:text-4xl text-[#a76734] mx-6 font-bold">&</p>
+          <img src={MAIA_Logo} alt="Weaving Loom" className="h-8 lg:h-12 object-cover" />
         </div>
-        <img src={Band_Vector_1} alt="Loom Coffeehouse Logo" className="absolute top-0 right-0" />
-        <img src={Band_Vector_2} alt="Loom Coffeehouse Logo" className="absolute top-0 left-0" />
+        <img src={Band_Vector_1} alt="Loom Coffeehouse Logo" className="w-[20%] lg:w-auto lg:h-auto absolute top-0 right-0" />
+        <img src={Band_Vector_2} alt="Loom Coffeehouse Logo" className="w-[20%] lg:w-auto lg:h-auto absolute top-0 left-0" />
       </main>
 
       <main className="w-full h-screen"
       >
         <div 
-            className=' h-[50%]'
+            className='h-[40%] lg:h-[50%]'
             style={{ backgroundImage: `url(${M6_Background})` }}
         />
         <div 
-            className='h-[50%] bg-[#575f3d] flex justify-center items-center '
+            className='h-[60%] lg:h-[50%] bg-[#575f3d] flex flex-col lg:flex-row justify-center items-center '
         >
           <div className='flex flex-col justify-center'>
-            <img src={TreesFL_Logo} alt="Weaving Loom" className="h-28 object-cover" />
-            <button className="mx-auto font-semibold py-2 px-4 border border-[#8292a7] rounded-full shadow text-[#d0ac95] focus:outline-none focus:ring-2 focus:ring-[#FFD8CC] focus:ring-opacity-50">
+            <img src={TreesFL_Logo} alt="Weaving Loom" className="h-20 lg:h-28 object-cover" />
+            <button className="mx-auto text-sm lg:text-base font-semibold py-2 px-4 border border-[#8292a7] rounded-full shadow text-[#d0ac95] focus:outline-none focus:ring-2 focus:ring-[#FFD8CC] focus:ring-opacity-50">
                 LEARN MORE
             </button>
           </div>
-          <div className='bg-[#8292a7] h-[60%] w-1 mx-20'/>
+          <div className='bg-[#8292a7] h-1 lg:h-[60%] w-[60%] lg:w-1 mt-8 mb-2 lg:my-0 mx-20'/>
           <div className='flex flex-col justify-center'>
-            <h2 className='text-white text-[10rem]'>262</h2>
-            <p className='text-white text-xl -mt-10 ml-5'>Trees in this grove</p>
+            <h2 className='text-white text-center text-[5rem] lg:text-[10rem]'>262</h2>
+            <p className='text-white text-center lg:text-left text-xl -mt-4 lg:-mt-10 lg:ml-5'>Trees in this grove</p>
           </div>
         </div>
       </main>
@@ -142,32 +142,32 @@ const Purpose = () => {
       <main className="w-full h-screen"
       >
         <div 
-            className=' h-[50%]'
+            className='h-[40%] lg:h-[50%]'
             style={{ backgroundImage: `url(${M7_Background})`,backgroundPosition:'top' }}
         />
         <div 
-            className='h-[50%] bg-[#dedbd6] flex justify-center items-center '
+            className='h-[60%] lg:h-[50%] bg-[#dedbd6] flex flex-col lg:flex-row justify-center items-center '
         >
           <div className='flex flex-col justify-center'>
-            <img src={MAIA_Logo} alt="Weaving Loom" className="h-28 object-cover" />
-            <button className="mx-auto font-semibold py-2 px-4 border border-[#a76734] rounded-full shadow text-[#575f3d] focus:outline-none focus:ring-2 focus:ring-[#FFD8CC] focus:ring-opacity-50">
+            <img src={MAIA_Logo} alt="Weaving Loom" className="h-20 lg:h-28 object-cover" />
+            <button className="mx-auto font-semibold mt-4 py-2 px-4 text-sm lg:text-base border border-[#a76734] rounded-full shadow text-[#575f3d] focus:outline-none focus:ring-2 focus:ring-[#FFD8CC] focus:ring-opacity-50">
                 LEARN MORE
             </button>
           </div>
-          <div className='bg-[#8292a7] h-[60%] w-1 mx-20'/>
+          <div className='bg-[#8292a7] h-1 lg:h-[60%] w-[60%] lg:w-1 mt-8 mb-6 lg:my-0 mx-20'/>
           <div className='flex flex-col justify-center'>
-            <h2 className='text-[#575f3d] text-[6rem]'>$1000 <span className='text-[5rem] font-thin'>USD</span></h2>
-            <p className='text-[#8292a7] text-xl -mt-5 ml-5'>Donated so far</p>
+            <h2 className='text-[#575f3d]  text-5xl lg:text-[6rem]'>$1000 <span className='text-4xl lg:text-[5rem] font-thin'>USD</span></h2>
+            <p className='text-[#8292a7] text-lg lg:text-xl mt-2 lg:mt-5 ml-5'>Donated so far</p>
           </div>
         </div>
       </main>
 
-      <main class="flex flex-row  min-h-screen p-20" style={{ backgroundImage: `url(${M5_Background})` }}>
-        <div className='w-full flex justify-between'>
-          <h2 className='text-5xl'>Visit us<br/>and make a<br/>difference</h2>
+      <main class="flex flex-row  min-h-screen p-10 lg:p-20" style={{ backgroundImage: `url(${M5_Background})` }}>
+        <div className='w-full flex flex-col lg:flex-row justify-between'>
+          <h2 className='text-3xl lg:text-5xl'>Visit us<br/>and make a<br/>difference</h2>
           <div className='flex flex-col items-end'>
-            <img src={M7_logo} alt="Weaving Loom" className=" h-10 mt-4 object-cover" />
-            <div className="flex space-x-4 mt-2">
+            <img src={M7_logo} alt="Weaving Loom" className="h-8 lg:h-10 mt-4 object-cover" />
+            <div className="flex space-x-4 pb-[90%] lg:pb-0 mt-2">
               {/* Ícono de Facebook */}
               <a href="https://www.facebook.com/share/tCBZRZFuTBMt8Wvq/?mibextid=wwXIfr" target='_blank' aria-label="Facebook">
                 <FontAwesomeIcon

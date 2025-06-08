@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react' 
 import { useNavigate } from 'react-router-dom';
 
 import M1_backgroundImage from '../assets/Home/1.png'
@@ -23,6 +23,9 @@ import Band_Vector_2 from '../assets/Home/11.png'
 
 const Home = () => {
     const navigate = useNavigate();
+
+    const servicesRef = useRef(null);
+    const contactRef = useRef(null);
 
     const goTo = (path) => {
         navigate(path); // Navega directamente a la ruta especificada
@@ -81,11 +84,11 @@ const Home = () => {
 
                     {/* Contenedor de texto */}
                         <div className='w-[80%] lg:w-[35%] h-full flex flex-col lg:ml-20 text-center items-center justify-center'>
-                            <h2 className="text-3xl lg:text-5xl font-lustria mb-8 text-[#575F3D]">Every time you give <br/>a sip of coffee <br/>from Loom,</h2>
+                            <h2 className="text-3xl lg:text-5xl font-lustria mb-8 text-[#575F3D]">Every time you give a sip of coffee from Loom,</h2>
                             <p className="text-lg lg:text-2xl  lg:mt-4 text-[#8292A7]">
-                                you're, not only changing the life of<br/> the people who harvested it, but also, the lives of the people closest to us.
+                                you're, not only changing the life of the people who harvested it, but also, the lives of the people closest to us.
                             </p>
-                            <button onClick={() => goTo('/mastery')} className="mt-10 text-[#A76734] lg:text-xl font-semibold py-2 px-4 border border-[#A76734] rounded-full shadow hover:bg-[#A76734] hover:text-[#DED8D6] focus:outline-none focus:ring-2 focus:ring-[#FFD8CC] focus:ring-opacity-50">
+                            <button onClick={() => servicesRef.current.scrollIntoView({ behavior: 'smooth' })} className="mt-10 text-[#A76734] lg:text-xl font-semibold py-2 px-4 border border-[#A76734] rounded-full shadow hover:bg-[#A76734] hover:text-[#DED8D6] focus:outline-none focus:ring-2 focus:ring-[#FFD8CC] focus:ring-opacity-50">
                                 MAKE A DIFFERENCE
                             </button>
                         </div>
@@ -105,40 +108,40 @@ const Home = () => {
 
                 {/* --------------------------------------------------------------------------------------------------------------------------------------- */}
 
-                <main className="min-h-screen px-4 py-8 bg-[#DEDBD6] flex flex-col items-center justify-center text-center">
-                    <h2 className="text-2xl lg:text-3xl font-avenir-book mt-4 lg:mb-6 text-[#A76734]">WHAT BE BELIEVE IN</h2>
-                    <div className="flex justify-center items-center flex-col lg:flex-row space-x-4 w-full">
+                <main ref={servicesRef} className="min-h-screen px-4 py-8 bg-[#DEDBD6] flex flex-col items-center justify-center text-center">
+                    <h2 className="text-2xl lg:text-3xl font-avenir-book mt-4 lg:mb-6 text-[#A76734]">OUR SERVICES</h2>
+                    <div className="flex justify-center items-center flex-col lg:flex-row space-x-16 w-full">
                         {/* Autonomy Section */}
                         <div className="lg:w-[16%] py-10 flex flex-col justify-center">
                             <img src={M4_autonomyImage} alt="Autonomy" className=" h-[50vh]" />
-                            <h3 className="text-2xl font-lustria mt-4 text-[#215A81]">Autonomy</h3>
+                            <h3 className="text-2xl font-lustria mt-4 text-[#215A81]">Coffee Roasting</h3>
                             <div className='bg-[#A76734] mx-auto h-1 rounded-full w-28 my-2'/>
-                            <p className="lg:text-lg text-[#8292A7] mb-2">Everyone works and<br/>acts at their own pace.</p>
-                            <button className="mx-auto mt-2 lg:mt-10 text-[#A76734] font-semibold py-2 px-4 border border-[#A76734] rounded-full shadow hover:bg-[#A76734] hover:text-[#DED8D6] focus:outline-none focus:ring-2 focus:ring-[#FFD8CC] focus:ring-opacity-50">
+                            <p className="lg:text-lg text-[#8292A7] mb-2">We roast green coffee beans into rich, flavorful profiles. Our roasting services are tailored to meet your business needs and taste preferences.</p>
+                            {/* <button className="mx-auto mt-2 lg:mt-10 text-[#A76734] font-semibold py-2 px-4 border border-[#A76734] rounded-full shadow hover:bg-[#A76734] hover:text-[#DED8D6] focus:outline-none focus:ring-2 focus:ring-[#FFD8CC] focus:ring-opacity-50">
                                 OUR COFFEE
-                            </button>
+                            </button> */}
                         </div>
 
                         {/* Mastery Section */}
                         <div className="lg:w-[16%] py-10 flex flex-col justify-center items">
                             <img src={M4_masteryImage} alt="Mastery" className=" h-[50vh]" />
-                            <h3 className="text-2xl font-lustria mt-4 text-[#215A81]">Mastery</h3>
+                            <h3 className="text-2xl font-lustria mt-4 text-[#215A81]">Coffee Roasting</h3>
                             <div className='bg-[#A76734] mx-auto h-1 rounded-full w-28 my-2'/>
-                            <p className="lg:text-lg text-[#8292A7] mb-2">We will all seek<br/>perfection in our art.</p>
-                            <button className="mx-auto mt-2 lg:mt-10 text-[#A76734] font-semibold py-2 px-4 border border-[#A76734] rounded-full shadow hover:bg-[#A76734] hover:text-[#DED8D6] focus:outline-none focus:ring-2 focus:ring-[#FFD8CC] focus:ring-opacity-50">
+                            <p className="lg:text-lg text-[#8292A7] mb-2">We roast green coffee beans into rich, flavorful profiles. Our roasting services are tailored to meet your business needs and taste preferences.</p>
+                            {/* <button className="mx-auto mt-2 lg:mt-10 text-[#A76734] font-semibold py-2 px-4 border border-[#A76734] rounded-full shadow hover:bg-[#A76734] hover:text-[#DED8D6] focus:outline-none focus:ring-2 focus:ring-[#FFD8CC] focus:ring-opacity-50">
                                 GET TO KNOW US
-                            </button>
+                            </button> */}
                         </div>
 
                         {/* Purpose Section */}
                         <div className="lg:w-[16%] py-10 flex flex-col justify-center">
                             <img src={M4_purposeImage} alt="Purpose" className=" h-[50vh]" />
-                            <h3 className="text-2xl font-lustria mt-4 text-[#215A81]">Purpose</h3>
+                            <h3 className="text-2xl font-lustria mt-4 text-[#215A81]">Quality Control & Cupping</h3>
                             <div className='bg-[#A76734] mx-auto h-1 rounded-full w-28 my-2'/>
-                            <p className="lg:text-lg text-[#8292A7] mb-2">It’s the glue that<br/>holds us together.</p>
-                            <button className="mx-auto mt-2 lg:mt-10 text-[#A76734] font-semibold py-2 px-4 border border-[#A76734] rounded-full shadow hover:bg-[#a76834d5] hover:text-[#DED8D6] focus:outline-none focus:ring-2 focus:ring-[#FFD8CC] focus:ring-opacity-50">
+                            <p className="lg:text-lg text-[#8292A7] mb-2">From sourcing to final brew, we perform expert cupping sessions and quality assessments to guarantee excellence in every cup.</p>
+                            {/* <button className="mx-auto mt-2 lg:mt-10 text-[#A76734] font-semibold py-2 px-4 border border-[#A76734] rounded-full shadow hover:bg-[#a76834d5] hover:text-[#DED8D6] focus:outline-none focus:ring-2 focus:ring-[#FFD8CC] focus:ring-opacity-50">
                                 MAKE AN IMPACT
-                            </button>
+                            </button> */}
                         </div>
                     </div>
                 </main>
@@ -157,14 +160,14 @@ const Home = () => {
                         className='h-full lg:h-[30%] flex justify-center items-center'
                         style={{ backgroundImage: `url(${M5_2_bg})` }}
                     >
-                        <button className="mx-auto text-xl font-semibold py-2 px-4 border border-[#a76834c2] rounded-full shadow bg-[#A76734] text-[#DED8D6] focus:outline-none focus:ring-2 focus:ring-[#FFD8CC] focus:ring-opacity-50">
-                            ABOUT LOOM
+                        <button onClick={() => contactRef.current.scrollIntoView({ behavior: 'smooth' })} className="mx-auto text-xl font-semibold py-2 px-4 border border-[#a76834c2] rounded-full shadow bg-[#A76734] text-[#DED8D6] focus:outline-none focus:ring-2 focus:ring-[#FFD8CC] focus:ring-opacity-50">
+                            CONTACT US 
                         </button>
                     </div>
                 </main>
 
 
-                <main className="w-full flex h-screen flex-col lg:flex-row">
+                <main ref={contactRef} className="w-full flex h-screen flex-col lg:flex-row">
                     <img src={M6_bg} alt="Weaving Loom" className="lg:w-[50%] h-full lg:h-full object-top lg:object-cover" />
                     <div  className="relative lg:w-[50%] text-left flex items-center justify-center bg-[#575f3d]">
                         <div  className="lg:w-[60%] my-[4rem] text-left font-avenir-book flex flex-col items-left justify-center ">

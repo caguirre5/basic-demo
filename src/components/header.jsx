@@ -34,7 +34,7 @@ const Header = ({ setActiveSection, activeSection }) => {
       </div>
 
       {/* Desktop Menu */}
-      <nav className="hidden lg:flex items-center flex-1 justify-center">
+      {/* <nav className="hidden lg:flex items-center flex-1 justify-center">
         <ul className="flex gap-8">
           {menuItems.map((item) => (
             <li
@@ -59,7 +59,7 @@ const Header = ({ setActiveSection, activeSection }) => {
             </li>
           ))}
         </ul>
-      </nav>
+      </nav> */}
 
       {/* Hamburger Icon */}
       <div className="lg:hidden z-50">

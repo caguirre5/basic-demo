@@ -113,7 +113,7 @@ const Home = () => {
                     <div className="flex justify-center items-center flex-col lg:flex-row lg:space-x-16 w-full">
                         {/* Autonomy Section */}
                         <div className="lg:w-[16%] py-10 flex flex-col justify-center items-center">
-                            <img src={M4_autonomyImage} alt="Autonomy" className=" lg:h-[50vh]" />
+                            <img src={M4_autonomyImage} alt="Autonomy" className=" h-[50vh]" />
                             <h3 className="text-2xl font-lustria mt-4 text-[#215A81]">Coffee Roasting</h3>
                             <div className='bg-[#A76734] mx-auto h-1 rounded-full w-28 my-2'/>
                             <p className="lg:text-lg text-[#8292A7] mb-2">We roast green coffee beans into rich, flavorful profiles. Our roasting services are tailored to meet your business needs and taste preferences.</p>
@@ -123,8 +123,8 @@ const Home = () => {
                         </div>
 
                         {/* Mastery Section */}
-                        <div className="w-full lg:w-[16%] py-10 flex flex-col justify-center items-center">
-                            <img src={M4_masteryImage} alt="Mastery" className="lg:h-[50vh]" />
+                        <div className="lg:w-[16%] py-10 flex flex-col justify-center items-center">
+                            <img src={M4_masteryImage} alt="Mastery" className="h-[50vh]" />
                             <h3 className="text-2xl font-lustria mt-4 text-[#215A81]">Packaging & Delivery</h3>
                             <div className='bg-[#A76734] mx-auto h-1 rounded-full w-28 my-2'/>
                             <p className="lg:text-lg text-[#8292A7] mb-2">We provide professional packaging and reliable delivery to ensure your coffee arrives fresh, aromatic, and beautifully presented.</p>

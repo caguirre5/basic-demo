@@ -62,7 +62,7 @@ const Header = ({ setActiveSection, activeSection }) => {
       </nav> */}
 
       {/* Hamburger Icon */}
-      <div className="lg:hidden z-50">
+      {/* <div className="lg:hidden z-50">
         <button
           className={`focus:outline-none ${
             menuOpen ? 'text-[#575f3D]' : 'text-white'
@@ -74,7 +74,7 @@ const Header = ({ setActiveSection, activeSection }) => {
         >
           {menuOpen ? '✕' : '☰'}
         </button>
-      </div>
+      </div> */}
 
       <div className="lg:flex-1" />
 
